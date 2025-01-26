@@ -32,6 +32,18 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: err.message });
 });
 
+app.get("/", (req, res) => {
+  res.send("Welcome to the Express API!");
+});
+
+app.get("/api/v1/products", (req, res) => {
+  res.json([
+    { id: 1, name: "Product 1", price: 100 },
+    { id: 2, name: "Product 2", price: 200 },
+    { id: 3, name: "Product 3", price: 300 },
+  ]);
+});
+
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
