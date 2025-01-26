@@ -44,14 +44,6 @@ app.get("/api/v1/products", (req, res) => {
   ]);
 });
 
-app.use("/api/v1/categories", (req, res) => {
-  res.json([
-    { id: 1, name: "Fresh Vegetables" },
-    { id: 2, name: "Electronics" },
-    { id: 3, name: "Fruits Items" },
-  ]);
-});
-
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
