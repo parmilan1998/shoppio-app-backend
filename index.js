@@ -32,10 +32,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ message: err.message });
 });
 
-app.get("/", (req, res) => {
-  res.send("Welcome to the Express API!");
-});
-
 app.get("/api/v1/products", (req, res) => {
   res.json([
     { id: 1, name: "Anchor", price: 1100.0 },
