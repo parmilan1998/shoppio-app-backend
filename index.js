@@ -38,9 +38,17 @@ app.get("/", (req, res) => {
 
 app.get("/api/v1/products", (req, res) => {
   res.json([
-    { id: 1, name: "Product 1", price: 100 },
-    { id: 2, name: "Product 2", price: 200 },
-    { id: 3, name: "Product 3", price: 300 },
+    { id: 1, name: "Anchor", price: 1100.0 },
+    { id: 2, name: "Milk", price: 250.0 },
+    { id: 3, name: "Carrot", price: 450.0 },
+  ]);
+});
+
+app.use("/api/v1/categories", (req, res) => {
+  res.json([
+    { id: 1, name: "Fresh Vegetables" },
+    { id: 2, name: "Electronics" },
+    { id: 3, name: "Fruits Items" },
   ]);
 });
 
