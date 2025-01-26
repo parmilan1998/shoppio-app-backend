@@ -33,7 +33,14 @@ app.use((err, req, res, next) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Welcome to the express server deployed in vercel");
+  res.send(`
+    <div style="text-align: center; font-family: Arial, sans-serif;">
+      <h1>🎉 Welcome to the Express Server Deployed on Vercel! 🚀✨</h1>
+      <p style="font-size: 1.2rem;">We're live and ready to serve your requests! 😎🌟</p>
+      <p>💻 Build amazing things, and deploy effortlessly! 💡</p>
+      <p>🛠️ <a href="https://vercel.com" target="_blank" style="color: #0070f3; text-decoration: none;">Learn more about Vercel</a></p>
+    </div>
+  `);
 });
 
 app.get("/api/v1/products", (req, res) => {
