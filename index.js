@@ -33,6 +33,10 @@ app.use((err, req, res, next) => {
 });
 
 app.get("/", (req, res) => {
+  res.send("Welcome to the express server deployed in vercel");
+});
+
+app.get("/api/v1/products", (req, res) => {
   res.json([
     { id: 1, name: "Anchor", price: 1100.0 },
     { id: 2, name: "Milk", price: 250.0 },
